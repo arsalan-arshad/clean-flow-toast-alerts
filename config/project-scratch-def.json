@@ -1,0 +1,10 @@
+{
+  "orgName": "Clean Flow Toast Alerts Scratch Org",
+  "edition": "Developer",
+  "features": ["EnableSetPasswordInApi"],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    }
+  }
+}

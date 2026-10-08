@@ -42,7 +42,11 @@ public with sharing class FlowToastController {
         req.soundType = (String) payload.get('soundType');
 
         try {
-            return FlowToastService.publishToastEvent(req);
+            FlowToastService.ToastResult result = FlowToastService.publishToastEvent(req);
+            if (result != null && !result.isSuccess) {
+                throw new AuraHandledException(result.errorMessage);
+            }
+            return result;
         } catch (Exception ex) {
             throw new AuraHandledException(ex.getMessage());
         }

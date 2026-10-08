@@ -14,6 +14,7 @@
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "61.0",
   "packageAliases": {
-    "CleanFlowToastAlerts": "0Hog70000003qi1CAA"
+    "CleanFlowToastAlerts": "0Hog70000003qi1CAA",
+    "CleanFlowToastAlerts@0.1.0-1": "04tg7000000WDVBAA4"
   }
 }

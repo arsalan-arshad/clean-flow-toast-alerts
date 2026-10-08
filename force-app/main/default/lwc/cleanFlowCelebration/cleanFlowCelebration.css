@@ -1,0 +1,63 @@
+:host {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 220px;
+    overflow: hidden;
+}
+
+.celebration-container {
+    position: relative;
+    width: 100%;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.celebration-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.celebration-card {
+    position: relative;
+    z-index: 20;
+    background: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow:
+        0 10px 25px -5px rgba(0, 0, 0, 0.1),
+        0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e5e5;
+    max-width: 540px;
+    width: 90%;
+    margin: 1.5rem auto;
+}
+
+.celebration-badge {
+    background: linear-gradient(135deg, #0176d3 0%, #0b5cab 100%);
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+}
+
+.celebration-title {
+    font-weight: 800;
+    color: #032d60;
+}
+
+.celebration-subtitle {
+    font-size: 1rem;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+}

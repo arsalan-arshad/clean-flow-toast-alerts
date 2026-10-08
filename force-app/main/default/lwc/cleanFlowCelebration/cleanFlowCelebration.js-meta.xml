@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Clean Flow Celebration</masterLabel>
+    <description>Celebratory confetti cannon and audio fanfare for Flow completion screens.</description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="celebrationType" type="String" label="Celebration Style (confetti, cannons, fireworks, pride_rain)" description="Visual pattern for particles" default="confetti" />
+            <property name="duration" type="Integer" label="Duration (Seconds)" description="Animation duration in seconds (1-10)" default="4" />
+            <property name="particleCount" type="Integer" label="Particle Count" description="Number of celebratory particles (20-300)" default="120" />
+            <property name="colors" type="String" label="Custom Hex Colors (Comma-Separated)" description="e.g. #0070d2,#4bca81,#ffb75d,#ea001e" />
+            <property name="cardTitle" type="String" label="Card Title" description="Main header of celebratory card" default="🎉 Congratulations!" />
+            <property name="cardSubtitle" type="String" label="Card Subtitle" description="Supportive message" default="Your process finished successfully." />
+            <property name="showCard" type="Boolean" label="Show Celebration Card" description="Display congratulatory card overlay" default="true" />
+            <property name="badgeText" type="String" label="Badge Text" description="Upper badge text (e.g. MILESTONE REACHED)" default="MILESTONE REACHED" />
+            <property name="playSound" type="Boolean" label="Play Audio Fanfare" description="Play celebratory audio chime/fanfare" default="true" />
+            <property name="soundType" type="String" label="Sound Type (fanfare, tada, chime)" description="Audio sound" default="fanfare" />
+            <property name="actionButtonLabel" type="String" label="Action Button Label" description="Label for call-to-action button" />
+            <property name="actionButtonUrl" type="String" label="Action Button URL" description="Web URL to open on click" />
+            <property name="actionButtonRecordId" type="String" label="Action Record ID" description="Salesforce record navigated to on click" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

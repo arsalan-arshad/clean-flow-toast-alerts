@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Play_Sound__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag to play sound chime on toast receipt</description>
+    <label>Play Sound</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,82 @@
+<template>
+    <div class="slds-box slds-theme_default slds-p-around_small listener-panel">
+        <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center slds-m-bottom_small header-row">
+            <div class="slds-media slds-media_center">
+                <div class="slds-media__figure">
+                    <lightning-icon icon-name="utility:broadcast" size="small" variant="brand"></lightning-icon>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-text-heading_small listener-heading">Flow Toast Listener</h2>
+                    <p class="slds-text-body_small slds-text-color_weak">
+                        <template if:true="{isSubscribed}">
+                            <span class="slds-badge slds-theme_success slds-m-right_xx-small">Active</span>
+                            Listening for Flow & Agentforce toasts
+                        </template>
+                        <template if:false="{isSubscribed}">
+                            <span class="slds-badge slds-theme_error slds-m-right_xx-small">Disconnected</span>
+                            Reconnecting...
+                        </template>
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <lightning-button-icon
+                    icon-name="utility:refresh"
+                    variant="border-filled"
+                    size="small"
+                    alternative-text="Reconnect"
+                    title="Reconnect Event Stream"
+                    onclick="
+                        {
+                            handleReconnect;
+                        }
+                    "
+                ></lightning-button-icon>
+            </div>
+        </div>
+
+        <!-- Toast History Feed -->
+        <div class="slds-m-top_small">
+            <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center slds-m-bottom_xx-small">
+                <span class="slds-text-title_caps">Recent Notifications ({historyCount})</span>
+                <template if:true="{hasHistory}">
+                    <lightning-button
+                        label="Clear"
+                        variant="base"
+                        onclick="
+                            {
+                                handleClearHistory;
+                            }
+                        "
+                    ></lightning-button>
+                </template>
+            </div>
+
+            <template if:true="{hasHistory}">
+                <div class="history-list">
+                    <template for:each="{toastHistory}" for:item="item">
+                        <div key="{item.id}" class="slds-box slds-box_x-small history-item slds-m-bottom_xx-small">
+                            <div class="slds-grid slds-grid_align-spread">
+                                <div class="slds-grid slds-grid_vertical-align-center">
+                                    <span class="{item.badgeClass}">{item.variant}</span>
+                                    <span class="slds-text-title_bold slds-m-left_x-small item-title"
+                                        >{item.title}</span
+                                    >
+                                </div>
+                                <span class="slds-text-body_small slds-text-color_weak">{item.time}</span>
+                            </div>
+                            <p class="slds-text-body_small slds-m-top_xx-small item-message">{item.message}</p>
+                        </div>
+                    </template>
+                </div>
+            </template>
+
+            <template if:false="{hasHistory}">
+                <div class="slds-text-align_center slds-p-around_medium slds-text-color_weak empty-state">
+                    No recent notifications received yet.
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

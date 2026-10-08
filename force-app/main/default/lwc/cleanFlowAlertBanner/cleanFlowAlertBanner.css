@@ -1,0 +1,78 @@
+:host {
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.slds-notify_alert {
+    position: relative;
+    border-radius: 0.375rem;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.content-wrapper {
+    align-items: center;
+}
+
+.alert-title {
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 0.15rem;
+}
+
+.alert-message {
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.countdown-badge {
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: inherit;
+    border-radius: 1rem;
+}
+
+.progress-bar-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.progress-bar {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    transition: width 1s linear;
+}
+
+/* Custom Alert Theme Variants */
+.alert-theme-info {
+    background-color: #0176d3;
+    color: #ffffff;
+}
+
+.alert-theme-success {
+    background-color: #2e844a;
+    color: #ffffff;
+}
+
+.alert-theme-warning {
+    background-color: #fe9339;
+    color: #080707;
+}
+
+.alert-theme-error {
+    background-color: #ea001e;
+    color: #ffffff;
+}
+
+.alert-theme-offline {
+    background-color: #444444;
+    color: #ffffff;
+}

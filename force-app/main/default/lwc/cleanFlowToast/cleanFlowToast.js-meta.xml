@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Clean Flow Toast Launcher</masterLabel>
+    <description>Fires standard Salesforce toasts in Screen Flows with auto-advance and sound support.</description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="title" type="String" label="Toast Title" description="Header or title of the toast notification" />
+            <property name="message" type="String" label="Toast Message" description="Main message body (supports {0} placeholder if URL is provided)" required="true" />
+            <property name="variant" type="String" label="Variant (info, success, warning, error)" description="SLDS variant style" default="info" />
+            <property name="mode" type="String" label="Mode (dismissible, pester, sticky)" description="Toast persistence mode" default="dismissible" />
+            <property name="url" type="String" label="Link URL" description="Optional hyperlink URL" />
+            <property name="urlLabel" type="String" label="Link Label" description="Label for the hyperlink" default="View Record" />
+            <property name="recordId" type="String" label="Record ID" description="Salesforce record ID to navigate to" />
+            <property name="autoAdvance" type="Boolean" label="Auto-Advance Flow" description="Automatically move to the next screen or finish without user clicking Next" default="false" />
+            <property name="delayMs" type="Integer" label="Delay (ms)" description="Milliseconds before toast triggers" default="150" />
+            <property name="playSound" type="Boolean" label="Play Audio Chime" description="Play synthesized audio notification" default="false" />
+            <property name="soundType" type="String" label="Sound Type (chime, success, bell, warning, error)" description="Audio synthesis tone" default="chime" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

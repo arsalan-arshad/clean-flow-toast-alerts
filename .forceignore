@@ -1,10 +1,20 @@
+# LWC Jest tests
+**/__tests__/**
+
+# Package files
 package.json
 package-lock.json
 README.md
 CONTRIBUTING.md
 .gitignore
 .forceignore
+.eslintrc.json
+.prettierrc
+.prettierignore
 .env
 node_modules/
 .git/
 .github/
+assets/**
+jest.config.js
+force-app/test/**

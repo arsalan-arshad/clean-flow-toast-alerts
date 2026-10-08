@@ -1,0 +1,70 @@
+<template>
+    <template if:false="{isDismissed}">
+        <div class="{computedContainerClass}" role="alert">
+            <span class="slds-assistive-text">{assistiveText}</span>
+            <span class="{computedIconContainerClass}">
+                <lightning-icon
+                    icon-name="{computedIconName}"
+                    size="small"
+                    variant="{computedIconVariant}"
+                    class="slds-m-right_x-small"
+                ></lightning-icon>
+            </span>
+
+            <div class="slds-notify__content slds-grid slds-grid_align-spread slds-size_1-of-1 content-wrapper">
+                <div class="slds-col slds-grow">
+                    <template if:true="{title}">
+                        <h2 class="slds-text-heading_small alert-title">{title}</h2>
+                    </template>
+                    <p class="slds-text-body_regular alert-message">{message}</p>
+
+                    <template if:true="{hasAction}">
+                        <div class="slds-m-top_xx-small">
+                            <lightning-button
+                                label="{actionLabel}"
+                                variant="{actionVariant}"
+                                onclick="
+                                    {
+                                        handleActionClick;
+                                    }
+                                "
+                                class="slds-m-top_xx-small"
+                            ></lightning-button>
+                        </div>
+                    </template>
+                </div>
+
+                <div class="slds-col slds-no-flex slds-grid slds-grid_vertical-align-center">
+                    <template if:true="{showCountdown}">
+                        <span class="slds-badge slds-badge_lightest countdown-badge slds-m-right_small">
+                            {remainingSeconds}s
+                        </span>
+                    </template>
+
+                    <template if:true="{isDismissible}">
+                        <div class="slds-notify__close">
+                            <lightning-button-icon
+                                icon-name="utility:close"
+                                variant="bare-inverse"
+                                size="small"
+                                alternative-text="Close"
+                                title="Close"
+                                onclick="
+                                    {
+                                        handleDismiss;
+                                    }
+                                "
+                            ></lightning-button-icon>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <template if:true="{showCountdown}">
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="{progressBarStyle}"></div>
+                </div>
+            </template>
+        </div>
+    </template>
+</template>

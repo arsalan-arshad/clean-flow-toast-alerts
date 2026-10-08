@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Clean Flow Alert Banner</masterLabel>
+    <description>Rich SLDS alert banners for Flow screens and record pages with dismiss branching, actions, and timer.</description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="title" type="String" label="Alert Title" description="Header of the banner" />
+            <property name="message" type="String" label="Alert Message" description="Message body of the banner" required="true" />
+            <property name="variant" type="String" label="Variant (info, success, warning, error, offline)" description="SLDS color theme" default="info" />
+            <property name="iconName" type="String" label="SLDS Icon Override" description="e.g. utility:info, utility:announcement" />
+            <property name="isDismissible" type="Boolean" label="Dismissible" description="Allows the user to close the banner" default="false" />
+            <property name="actionLabel" type="String" label="Action Button Label" description="Label for optional action button" />
+            <property name="actionUrl" type="String" label="Action URL" description="URL opened when action button is clicked" />
+            <property name="actionRecordId" type="String" label="Action Record ID" description="Salesforce record navigated to on click" />
+            <property name="actionVariant" type="String" label="Action Button Variant" description="SLDS button variant (neutral, brand, destructive)" default="neutral" />
+            <property name="showCountdown" type="Boolean" label="Auto-Dismiss Countdown" description="Automatically dismisses after specified seconds" default="false" />
+            <property name="countdownSeconds" type="Integer" label="Countdown Seconds" description="Timer duration before auto-dismiss" default="5" />
+            <property name="playSound" type="Boolean" label="Play Sound Tone" description="Play tone when banner appears" default="false" />
+            <property name="soundType" type="String" label="Sound Tone Type" description="Audio tone: chime, warning, error, success" />
+            <!-- Output Properties for Flow -->
+            <property name="isDismissed" type="Boolean" label="Is Dismissed (Output)" description="Output variable indicating if banner was closed" role="outputOnly" />
+            <property name="dismissCount" type="Integer" label="Dismiss Count (Output)" description="Number of times dismissed" role="outputOnly" />
+        </targetConfig>
+        <targetConfig targets="lightning__RecordPage,lightning__AppPage">
+            <property name="title" type="String" label="Alert Title" />
+            <property name="message" type="String" label="Alert Message" required="true" />
+            <property name="variant" type="String" label="Variant (info, success, warning, error, offline)" default="info" />
+            <property name="iconName" type="String" label="SLDS Icon Override" />
+            <property name="isDismissible" type="Boolean" label="Dismissible" default="true" />
+            <property name="actionLabel" type="String" label="Action Button Label" />
+            <property name="actionUrl" type="String" label="Action URL" />
+            <property name="actionRecordId" type="String" label="Action Record ID" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

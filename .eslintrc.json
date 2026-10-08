@@ -1,0 +1,7 @@
+{
+  "extends": ["@salesforce/eslint-config-lwc/recommended"],
+  "rules": {
+    "@lwc/lwc/no-async-operation": "off",
+    "@lwc/lwc/no-inner-html": "off"
+  }
+}

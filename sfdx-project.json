@@ -1,15 +1,19 @@
 {
   "packageDirectories": [
     {
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
       "path": "force-app",
       "default": true,
       "package": "CleanFlowToastAlerts",
-      "versionName": "ver 0.1",
-      "versionNumber": "0.1.0.NEXT"
+      "versionDescription": "Clean Flow Toast & Alerts (Flow UI Supercharger) - Open-source modern toasts, SLDS alert banners, and celebration confetti for Flows and Agentforce."
     }
   ],
   "name": "clean-flow-toast-alerts",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "61.0"
+  "sourceApiVersion": "61.0",
+  "packageAliases": {
+    "CleanFlowToastAlerts": "0Hog70000003qi1CAA"
+  }
 }

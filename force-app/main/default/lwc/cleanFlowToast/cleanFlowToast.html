@@ -1,41 +1,24 @@
 <template>
-    <template if:false="{autoAdvance}">
+    <template if:false={autoAdvance}>
         <div class="slds-box slds-theme_default slds-p-around_medium container-card">
             <div class="slds-media slds-media_center">
                 <div class="slds-media__figure">
-                    <lightning-icon
-                        icon-name="{computedIconName}"
-                        size="medium"
-                        variant="{computedIconVariant}"
-                    ></lightning-icon>
+                    <lightning-icon icon-name={computedIconName} size="medium" variant={computedIconVariant}></lightning-icon>
                 </div>
                 <div class="slds-media__body">
-                    <h2 class="slds-text-heading_small slds-truncate" title="{title}">{displayTitle}</h2>
+                    <h2 class="slds-text-heading_small slds-truncate" title={title}>{displayTitle}</h2>
                     <p class="slds-text-body_regular slds-m-top_xx-small">{message}</p>
-                    <template if:true="{hasLink}">
+                    <template if:true={hasLink}>
                         <div class="slds-m-top_x-small">
-                            <a
-                                href="{computedLinkUrl}"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="slds-text-link"
-                            >
+                            <a href={computedLinkUrl} target="_blank" rel="noopener noreferrer" class="slds-text-link">
                                 {displayLinkLabel}
                             </a>
                         </div>
                     </template>
                 </div>
-                <template if:true="{showManualAdvance}">
+                <template if:true={showManualAdvance}>
                     <div class="slds-media__figure slds-media__figure_reverse">
-                        <lightning-button
-                            label="Continue"
-                            variant="brand"
-                            onclick="
-                                {
-                                    handleManualAdvance;
-                                }
-                            "
-                        ></lightning-button>
+                        <lightning-button label="Continue" variant="brand" onclick={handleManualAdvance}></lightning-button>
                     </div>
                 </template>
             </div>

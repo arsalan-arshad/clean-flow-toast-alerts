@@ -4,33 +4,31 @@
         <canvas class="celebration-canvas" lwc:dom="manual"></canvas>
 
         <!-- Optional Celebration Card -->
-        <template if:true="{showCard}">
+        <template if:true={showCard}>
             <div class="slds-box slds-theme_default celebration-card slds-text-align_center slds-p-around_large">
-                <template if:true="{badgeText}">
+                <template if:true={badgeText}>
                     <div class="slds-m-bottom_small">
                         <span class="slds-badge celebration-badge">{badgeText}</span>
                     </div>
                 </template>
 
-                <h1 class="slds-text-heading_large celebration-title slds-m-bottom_x-small">{displayTitle}</h1>
+                <h1 class="slds-text-heading_large celebration-title slds-m-bottom_x-small">
+                    {displayTitle}
+                </h1>
 
-                <template if:true="{cardSubtitle}">
+                <template if:true={cardSubtitle}>
                     <p class="slds-text-body_regular slds-text-color_weak celebration-subtitle slds-m-bottom_medium">
                         {cardSubtitle}
                     </p>
                 </template>
 
                 <div class="slds-grid slds-grid_align-center slds-gutters_small action-buttons">
-                    <template if:true="{hasAction}">
+                    <template if:true={hasAction}>
                         <div class="slds-col">
                             <lightning-button
-                                label="{actionButtonLabel}"
+                                label={actionButtonLabel}
                                 variant="brand"
-                                onclick="
-                                    {
-                                        handleActionClick;
-                                    }
-                                "
+                                onclick={handleActionClick}
                             ></lightning-button>
                         </div>
                     </template>
@@ -39,11 +37,7 @@
                         <lightning-button
                             label="Replay Celebration 🎊"
                             variant="neutral"
-                            onclick="
-                                {
-                                    handleReplay;
-                                }
-                            "
+                            onclick={handleReplay}
                         ></lightning-button>
                     </div>
                 </div>

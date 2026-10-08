@@ -1,5 +1,8 @@
 node_modules/
 .sf/
 .sfdx/
+.localdevserver/
+coverage/
 dist/
 package-lock.json
+**/*.html

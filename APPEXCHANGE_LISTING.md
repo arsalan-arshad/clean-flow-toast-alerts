@@ -17,6 +17,9 @@ This document contains the complete listing metadata, marketing copy, technical 
 | **Target Audience** | Salesforce Administrators, Flow Architects, Developers, Consultants | All Orgs |
 | **Supported Editions** | Essentials, Professional, Enterprise, Unlimited, Developer | All editions with Flow Builder |
 | **Package Version ID** | `04tg7000000WDVBAA4` (`v0.1.0.1`) | Released 2GP Package |
+| **AppExchange Listing ID** | `c7bd1cd4-ec02-49d1-a0fb-cd302096e360` | Partner Console Listing |
+| **Listing Status** | **Awaiting Approval** | Submitted to AppExchange Operations |
+| **Live Listing Preview** | [👉 View AppExchange Preview](https://appexchange.salesforce.com/appxListingDetail?listingId=338650b9-ed5a-4a28-9c5f-20d8f0d21e5b&cta=gin&other_source=Web) | Direct Marketplace Preview |
 | **Source Repository** | [github.com/arsalan-arshad/clean-flow-toast-alerts](https://github.com/arsalan-arshad/clean-flow-toast-alerts) | Public MIT |
 
 ---

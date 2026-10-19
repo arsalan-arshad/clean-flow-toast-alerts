@@ -8,6 +8,7 @@
 
 [![CI](https://github.com/arsalan-arshad/clean-flow-toast-alerts/actions/workflows/ci.yml/badge.svg)](https://github.com/arsalan-arshad/clean-flow-toast-alerts/actions/workflows/ci.yml)
 [![CD](https://github.com/arsalan-arshad/clean-flow-toast-alerts/actions/workflows/cd.yml/badge.svg)](https://github.com/arsalan-arshad/clean-flow-toast-alerts/actions/workflows/cd.yml)
+[![AppExchange Listing](https://img.shields.io/badge/AppExchange-In%20Review-orange.svg?logo=salesforce)](https://appexchange.salesforce.com/appxListingDetail?listingId=338650b9-ed5a-4a28-9c5f-20d8f0d21e5b&cta=gin&other_source=Web)
 [![Install 2GP Package](https://img.shields.io/badge/Salesforce-2GP%20Package%20(v0.1.0)-blue.svg?logo=salesforce)](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tg7000000WDVBAA4)
 [![Sandbox Install](https://img.shields.io/badge/Install-in%20Sandbox-green.svg?logo=salesforce)](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tg7000000WDVBAA4)
 [![Apex Code Coverage](https://img.shields.io/badge/Apex%20Coverage-93%25-brightgreen.svg)](#6-verification--test-suite)
@@ -35,6 +36,7 @@ Install the official Second-Generation Managed Package (2GP Released `v0.1.0`) d
 
 | Target Org Environment | 1-Click Direct Installation Link |
 | :--- | :--- |
+| **AppExchange Listing** | [👉 **View on Salesforce AppExchange**](https://appexchange.salesforce.com/appxListingDetail?listingId=338650b9-ed5a-4a28-9c5f-20d8f0d21e5b&cta=gin&other_source=Web) |
 | **Production / Developer Edition** | [👉 **Install in Production / Dev Org (04tg7000000WDVBAA4)**](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tg7000000WDVBAA4) |
 | **Sandbox Environment** | [👉 **Install in Sandbox (04tg7000000WDVBAA4)**](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tg7000000WDVBAA4) |
 
